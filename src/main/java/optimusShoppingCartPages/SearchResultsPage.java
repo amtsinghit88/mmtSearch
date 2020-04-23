@@ -34,16 +34,17 @@ public class SearchResultsPage  extends BrowserInitialization
 		return driver.getTitle();
 	}
 
-	public void setProductPrice()
+	public void getProductPrice()
 	{
 		String price = seleniumGetText(productPrice);
 	}
+
 
 	public void openProudctDetailsPage()
 	{
 		if(searchResults.size()!=0)
 		{ Reporter.log("Search results are displayed", true);
-			Reporter.log(searchResults.get(0)+" Clicking on product links page",true);
+			Reporter.log("Clicking on "+seleniumGetText(searchResults.get(0))+" product links page",true);
 			SeleniumUtil.seleniumClick(searchResults.get(0));
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);}
 		else { Reporter.log("Search results are not displayed",true); }

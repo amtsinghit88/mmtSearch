@@ -1,53 +1,49 @@
 package optimusEcart;
 
-import browserSetUp.BrowserInitialization;
-import optimusShoppingCartPages.*;
+import optimusShoppingCartPages.OptimusCartDetailsPage;
+import optimusShoppingCartPages.OptimusHomePage;
+import optimusShoppingCartPages.OptimusProductDetailsPage;
+import optimusShoppingCartPages.SearchResultsPage;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import seleniumUtils.SeleniumUtil;
 
-import static browserSetUp.BrowserInitialization.*;
+import static browserSetUp.BrowserInitialization.closeBrowser;
 
-public class VerifyAddItemsToCart  extends BaseTest{
-
+public class AddItemsFromFeaturedCollection extends BaseTest
+{
 	OptimusHomePage optimusHomePage;
-	SearchResultsPage optimusSrp;
 	OptimusProductDetailsPage productDetailsPage;
 	OptimusCartDetailsPage cartPage;
+	String itemName= "";
 
 	@BeforeTest
-	public void searchProduct()
+	public void openFeaturedItemsdetails()
 	{
 		launchApplicatipion();
 		naivigateToHomePage();
 		optimusHomePage = new OptimusHomePage();
-		optimusHomePage.clickOnSearchIcon();
-		optimusHomePage.enterTextInSearchBox("shirt");
-		Reporter.log("Optimus search results page is displayed",true);
-
+		itemName = optimusHomePage.getFeaturedItemName();
+		optimusHomePage.clickFeaturedItemlink();
 	}
 
 	@Test
-	public void verifyAddItemsToCart()
+	public void verifyAddFeaturedItemsToCart()
 	{
-		optimusSrp = new SearchResultsPage();
+		optimusHomePage = new OptimusHomePage();
 		cartPage = new OptimusCartDetailsPage();
 		productDetailsPage = new OptimusProductDetailsPage();
-		optimusSrp.openProudctDetailsPage();
-		String productPageTitle = "RoundNeck Shirt – ecom.optimus";
+		String productPageTitle = "RoundNeck Shirt 14 – ecom.optimus";
 		Assert.assertEquals(productDetailsPage.productPageTitle(),productPageTitle);
-		String itemName = productDetailsPage.getItemName();
 		productDetailsPage.clickAddToCartBtn();
 		productDetailsPage.clickViewCartBtn();
 		String cartPageTitle = "Your Shopping Cart – ecom.optimus";
 		Assert.assertEquals(cartPage.cartPageTitle(),cartPageTitle);
 		Reporter.log("Optimus Shopping cart is displayed",true);
 		Assert.assertEquals(cartPage.getAddedItemname(),itemName);
-		Reporter.log("Item is successfully added into the cart",true);
+		Reporter.log("Featured item is successfully added into the cart",true);
 	}
 	@AfterTest
 	public void terminateTest()
@@ -55,10 +51,3 @@ public class VerifyAddItemsToCart  extends BaseTest{
 		closeBrowser();
 	}
 }
-
-
-
-
-
-//Constructor
-//Static

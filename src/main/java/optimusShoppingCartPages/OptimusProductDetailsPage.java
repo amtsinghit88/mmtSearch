@@ -52,7 +52,7 @@ public class OptimusProductDetailsPage extends BrowserInitialization
 		waitForElementVisiblity(driver,addToCartBtn,5);
 		if(isElementDisplayed(addToCartBtn))
 		{ seleniumClick(addToCartBtn);
-		Reporter.log("Adding items to cart ",true);}
+		Reporter.log(getItemName()+"Adding items to cart ",true);}
 		else{
 			Reporter.log(addToCartBtn+ " Element is not displayed ", true);
 		}
