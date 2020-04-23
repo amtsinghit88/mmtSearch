@@ -1,6 +1,7 @@
 package optimusShoppingCartPages;
 
 import browserSetUp.BrowserInitialization;
+import com.sun.org.apache.regexp.internal.RE;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -56,6 +57,31 @@ public class OptimusProductDetailsPage extends BrowserInitialization
 		else{
 			Reporter.log(addToCartBtn+ " Element is not displayed ", true);
 		}
+	}
+
+	public String getSelectedItemSize()
+	{
+		String size = "";
+        waitForElementVisiblity(driver,productSize,5);
+        if (isElementDisplayed(productSize))
+        {
+       	   seleniumClick(productSize);
+		   size = getSelectedOption(productSize);
+        }
+        else {Reporter.log("Select item size dropdown is not displayed",true); }
+       return size;
+	}
+
+	public void selectItemSize(String sizeValue)
+	{
+		waitForElementVisiblity(driver,productSize,5);
+		if (isElementDisplayed(productSize))
+		{
+			seleniumClick(productSize);
+			selectDropdownValue(productSize,sizeValue);
+			Reporter.log("Going to add item into cart with size "+sizeValue,true);
+		}
+		else{Reporter.log("Select item size dropdown is not displayed",true);}
 	}
 
 	public void clickViewCartBtn()

@@ -5,6 +5,7 @@ import org.testng.Reporter;
 import java.lang.reflect.Array;
 
 public class JavaUtils {
+
 	public float calculatePrice(String quantity, String price)
 	{
 		float totalPrice = parseCartprice(price)*Integer.parseInt(quantity);
@@ -18,4 +19,5 @@ public class JavaUtils {
 		float itemPrice = Float.parseFloat(cartPrice.replace(",", ""));
 		return itemPrice;
 	}
+
 }

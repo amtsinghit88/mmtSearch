@@ -4,7 +4,6 @@ import browserSetUp.BrowserInitialization;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
 import seleniumUtils.SeleniumUtil;
 
@@ -14,6 +13,9 @@ import static seleniumUtils.SeleniumUtil.*;
 
 public class OptimusHomePage extends BrowserInitialization
 {
+	@FindBy(xpath = "//a[@class ='site-header__logo-link']")
+	public WebElement homePageTitle;
+
 	@FindBy(xpath = "//span[text()= 'Search']/..")
 	public WebElement searchIcon;
 
@@ -21,17 +23,21 @@ public class OptimusHomePage extends BrowserInitialization
 	public WebElement searchTextBox;
 
 	@FindBy(xpath = "//ul[@class = 'grid grid--uniform grid--view-items']/li")
-    public List<WebElement> featuredItemsCollectionLink;
+    public List<WebElement> featuredItemsCollectionList;
 
 	@FindBy(xpath = "//div[text() = 'RoundNeck Shirt 14']")
 	public WebElement featureItemName;
 
 	public OptimusHomePage() { PageFactory.initElements(driver,this); }
 
-
-	public String homePageTitle()
+	public String getHomePageheader()
 	{
-		return driver.getTitle();
+		String pageTitle = "";
+		waitForElementVisiblity(driver,homePageTitle,5);
+		if(isElementDisplayed(homePageTitle)) {
+		pageTitle = seleniumGetText(homePageTitle); }
+	    else { Reporter.log("Displaying Optimus home page",true); }
+	    return pageTitle;
 	}
 
 	public void clickOnSearchIcon()
@@ -53,10 +59,10 @@ public class OptimusHomePage extends BrowserInitialization
 
 	public void clickFeaturedItemlink()
 	{
-		if(featuredItemsCollectionLink.size()!=0){Reporter.log("Featured item list is displayed", true);
+		if(featuredItemsCollectionList.size()!=0){Reporter.log("Featured item list is displayed", true);
 			Reporter.log(seleniumGetText(featureItemName)+" Clicking on product links page",true);
-			SeleniumUtil.seleniumClick(featuredItemsCollectionLink.get(0));}
-		else{ Reporter.log(featuredItemsCollectionLink+"No such element is displayed",true);}
+			SeleniumUtil.seleniumClick(featuredItemsCollectionList.get(0));}
+		else{ Reporter.log(featuredItemsCollectionList +"No such element is displayed",true);}
 	}
 
 	public String getFeaturedItemName()

@@ -29,6 +29,10 @@ public class OptimusCartDetailsPage extends BrowserInitialization {
 	@FindBy(xpath = "//td[@class ='cart__final-price text-right small--hide']/div/span")
 	public WebElement cartPrice;
 
+    @FindBy(xpath = "//li[text()='Size: S']")
+	public WebElement itemSize;
+
+
 	public OptimusCartDetailsPage() { PageFactory.initElements(driver,this); }
 
 	public String cartPageTitle() { return driver.getTitle(); }
@@ -51,9 +55,23 @@ public class OptimusCartDetailsPage extends BrowserInitialization {
 			e.printStackTrace();
 		}
 		return seleniumGetAttributValue(cartItemRow,attributeName);
-
 	}
 
+	public String getItemSize()
+	{
+		String size= "";
+		waitForElementVisiblity(driver,itemSize,5);
+		if (isElementDisplayed(itemSize))
+		{
+			Reporter.log("Getting cart item size",true);
+			String[] sizeArray =  seleniumGetText(itemSize).split(" ");
+			size = sizeArray[1];
+		}
+		else {
+			Reporter.log(seleniumGetText(itemSize) +"Item size is not displayed",true);
+		}
+        return size;
+	}
 
 
 	public String getTotalItemPrice(){

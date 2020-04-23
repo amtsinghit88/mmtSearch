@@ -16,7 +16,6 @@ public class VerifyMultipleSizeItemsInCart extends BaseTest
 {
 	String itemName = "";
 	OptimusHomePage optimusHomePage;
-	SearchResultsPage optimusSrp;
 	OptimusProductDetailsPage productDetailsPage;
 	OptimusCartDetailsPage cartPage;
 
@@ -28,22 +27,25 @@ public class VerifyMultipleSizeItemsInCart extends BaseTest
 		optimusHomePage = new OptimusHomePage();
 		itemName = optimusHomePage.getFeaturedItemName();
 		optimusHomePage.clickFeaturedItemlink();
-
 	}
 
 	@Test
-	public void verifyAddItemsToCart()
+	public void verifyAddDifferentSizeItemsToCart()
 	{
 		optimusHomePage = new OptimusHomePage();
 		cartPage = new OptimusCartDetailsPage();
 		productDetailsPage = new OptimusProductDetailsPage();
 		String productPageTitle = "RoundNeck Shirt 14 – ecom.optimus";
 		Assert.assertEquals(productDetailsPage.productPageTitle(),productPageTitle);
+		productDetailsPage.selectItemSize("S");
+		String selectedItemSize = productDetailsPage.getSelectedItemSize();
 		productDetailsPage.clickAddToCartBtn();
 		productDetailsPage.clickViewCartBtn();
 		String cartPageTitle = "Your Shopping Cart – ecom.optimus";
 		Assert.assertEquals(cartPage.cartPageTitle(),cartPageTitle);
 		Reporter.log("Optimus Shopping cart is displayed",true);
+		Assert.assertEquals(cartPage.getItemSize(),selectedItemSize);
+		Reporter.log("Changed Item size is successfully added to cart",true);
 
 
 	}

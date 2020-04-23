@@ -4,7 +4,6 @@ import browserSetUp.BrowserInitialization;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
 import seleniumUtils.SeleniumUtil;
 
@@ -17,7 +16,7 @@ public class SearchResultsPage  extends BrowserInitialization
 {
 
 	@FindBy(xpath = "//a[@class = 'full-width-link']")
-	public List<WebElement> searchResults;
+	public List<WebElement> searchResultsList;
 
 
 	@FindBy(xpath = "(//span[@class = 'price-item price-item--regular'])[1]")
@@ -42,10 +41,10 @@ public class SearchResultsPage  extends BrowserInitialization
 
 	public void openProudctDetailsPage()
 	{
-		if(searchResults.size()!=0)
+		if(searchResultsList.size()!=0)
 		{ Reporter.log("Search results are displayed", true);
-			Reporter.log("Clicking on "+seleniumGetText(searchResults.get(0))+" product links page",true);
-			SeleniumUtil.seleniumClick(searchResults.get(0));
+			Reporter.log("Clicking on "+seleniumGetText(searchResultsList.get(0))+" product links page",true);
+			SeleniumUtil.seleniumClick(searchResultsList.get(0));
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);}
 		else { Reporter.log("Search results are not displayed",true); }
 

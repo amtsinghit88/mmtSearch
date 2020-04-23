@@ -81,13 +81,48 @@ public class SeleniumUtil
 
 	public static String seleniumGetText(WebElement ele)
 	{
-		return ele.getText();
+		String text ="";
+		try
+		{
+			if (ele.isDisplayed())
+			text = ele.getText();
+		}
+		catch (NoSuchElementException | StaleElementReferenceException | ElementNotVisibleException exc)
+		{
+			exc.printStackTrace();
+			Reporter.log("No such element exception :: locator value" + ele,true);
+		}
+		return text;
 	}
 
-	public static WebElement getSelectedOption(WebElement ele)
+	public static String getSelectedOption(WebElement ele)
 	{
-		Select dropDownValue = new Select(ele);
-		return dropDownValue.getFirstSelectedOption();
+		String selectedValue = "";
+		try {
+			if (ele.isEnabled()){
+			Select dropDownValue = new Select(ele);
+				selectedValue= dropDownValue.getFirstSelectedOption().getText();}
+		}
+		catch (NoSuchElementException | StaleElementReferenceException | ElementNotVisibleException exc)
+		{
+			exc.printStackTrace();
+			Reporter.log("No such element exception :: locator value" + ele,true);
+		}
+		return selectedValue;
+	}
+
+	public static void selectDropdownValue(WebElement ele,String size)
+	{
+		try {
+			if (ele.isEnabled()){
+				Select dropDownValue = new Select(ele);
+				dropDownValue.selectByValue(size);}
+		}
+		catch (NoSuchElementException | StaleElementReferenceException | ElementNotVisibleException exc)
+		{
+			exc.printStackTrace();
+			Reporter.log("No such element exception :: locator value" + ele,true);
+		}
 	}
 
 	public static String seleniumGetAttributValue(WebElement ele, String attributeName)
