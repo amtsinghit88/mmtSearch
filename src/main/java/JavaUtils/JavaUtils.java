@@ -1,16 +1,21 @@
 package JavaUtils;
 
+import org.testng.Reporter;
+
+import java.lang.reflect.Array;
+
 public class JavaUtils {
-	public int calculatePrice(String quantity, String price)
+	public float calculatePrice(String quantity, String price)
 	{
-		String[] priceArray = price.split(" ");
-		int totalPrice = Integer.parseInt(priceArray[1])*Integer.parseInt(quantity);
+		float totalPrice = parseCartprice(price)*Integer.parseInt(quantity);
 		return totalPrice;
 	}
 
-	public int parseCartprice(String price){
+	public float parseCartprice(String price){
 		String[] priceArray = price.split(" ");
-		int cartPrice = Integer.parseInt(priceArray[1]);
-		return cartPrice;
+		Reporter.log("Cart item price is " + Array.get(priceArray, 1));
+		String cartPrice = (String) Array.get(priceArray, 1);
+		float itemPrice = Float.parseFloat(cartPrice.replace(",", ""));
+		return itemPrice;
 	}
 }

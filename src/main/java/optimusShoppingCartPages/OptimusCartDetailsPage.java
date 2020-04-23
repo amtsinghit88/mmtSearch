@@ -10,6 +10,7 @@ import org.testng.Reporter;
 import java.util.concurrent.TimeUnit;
 
 import static seleniumUtils.SeleniumUtil.*;
+import static seleniumUtils.SeleniumUtil.seleniumGetAttributValue;
 
 public class OptimusCartDetailsPage extends BrowserInitialization {
 
@@ -17,7 +18,7 @@ public class OptimusCartDetailsPage extends BrowserInitialization {
 	public WebElement addedItemName;
 
 	@FindBy(xpath = "//dd")
-	public WebElement itemPrice;
+	public WebElement perItemPrice;
 
 	@FindBy(id = "updates_large_32250403881069:a06bde7dcc089f59f99d731ea9492fb9")
 	public WebElement inputCartQuanatitybox;
@@ -32,35 +33,48 @@ public class OptimusCartDetailsPage extends BrowserInitialization {
 
 	public String cartPageTitle() { return driver.getTitle(); }
 
-	public String getItemPrice(){
-		Reporter.log("Cart Item price is "+ seleniumGetText(cartPrice),true);
-		return seleniumGetText(cartPrice);}
+	public String getPerItemPrice(){
+		Reporter.log("Cart Item price is "+ seleniumGetText(perItemPrice),true);
+		return seleniumGetText(perItemPrice);}
 
 	public String getAddedItemname() {
 		Reporter.log("Cart Item Name is "+ seleniumGetText(addedItemName),true);
 		return seleniumGetText(addedItemName); }
 
+
 	public String getItemQuantity() {
-		Reporter.log("Cart Item quantity is "+ cartItemRow.getAttribute("data-cart-item-quantity"),true);
-		return cartItemRow.getAttribute("data-cart-item-quantity"); }
+		String attributeName = "data-cart-item-quantity";
+		try {
+			Thread.sleep(6000);
+			Reporter.log("Cart Item quantity is "+ seleniumGetAttributValue(cartItemRow,attributeName),true);}
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return seleniumGetAttributValue(cartItemRow,attributeName);
+
+	}
+
+
 
 	public String getTotalItemPrice(){
-		Reporter.log("Cart Item price is "+ seleniumGetText(itemPrice),true);
-		return seleniumGetText(itemPrice);}
+		Reporter.log("Cart Item price is "+ seleniumGetText(cartPrice),true);
+		return seleniumGetText(cartPrice);}
 
-	public void changeCartQuantity()
+	public String changeCartQuantity()
 	{
+		String cartQuantity = "";
 		waitForElementVisiblity(driver,inputCartQuanatitybox,5);
 		if(isElementDisplayed(inputCartQuanatitybox)){
 			seleniumClick(inputCartQuanatitybox);
 			Reporter.log("Changing cart item quantity",true);
-            inputCartQuanatitybox.sendKeys(Keys.UP);
-            driver.manage().timeouts().pageLoadTimeout(5000, TimeUnit.MILLISECONDS);
-            Reporter.log("Changed item quantity is "+ getItemQuantity(),true);
+			inputCartQuanatitybox.sendKeys(Keys.UP);
+			cartQuantity= getItemQuantity();
+			Reporter.log("Changed item quantity is "+ cartQuantity,true);
 		}
 		else {
 			Reporter.log(inputCartQuanatitybox +"element is not displayed",true);
 		}
+		return cartQuantity;
 	}
 
 }

@@ -37,6 +37,8 @@ public class BrowserInitialization
 
 	public static void closeBrowser()
 	{
+		Reporter.log("Closing the application",true);
+		driver.close();
 		driver.quit();
 	}
 

@@ -90,6 +90,11 @@ public class SeleniumUtil
 		return dropDownValue.getFirstSelectedOption();
 	}
 
+	public static String seleniumGetAttributValue(WebElement ele, String attributeName)
+	{
+		return ele.getAttribute(attributeName);
+	}
+
 
 
 

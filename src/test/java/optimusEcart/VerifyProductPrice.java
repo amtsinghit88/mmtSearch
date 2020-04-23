@@ -5,10 +5,11 @@ import optimusShoppingCartPages.*;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
+import static browserSetUp.BrowserInitialization.closeBrowser;
 
 
 public class VerifyProductPrice extends  BaseTest
@@ -45,11 +46,16 @@ public class VerifyProductPrice extends  BaseTest
 		productDetailsPage.clickViewCartBtn();
 		String cartPageTitle = "Your Shopping Cart – ecom.optimus";
 		Assert.assertEquals(cartPage.cartPageTitle(),cartPageTitle);
-		cartPage.changeCartQuantity();
-		int actualCartPrice = util.parseCartprice(cartPage.getTotalItemPrice());
-		int expectedCartPrice = util.calculatePrice(cartPage.getItemQuantity(), cartPage.getItemPrice());
+		String updatedCartQuantity = cartPage.changeCartQuantity();
+		float actualCartPrice = util.parseCartprice(cartPage.getTotalItemPrice());
+		float expectedCartPrice = util.calculatePrice(updatedCartQuantity, cartPage.getPerItemPrice());
 		Assert.assertEquals(actualCartPrice,expectedCartPrice);
-		Reporter.log("Cart price is calculated Successfully");
+		Reporter.log("Cart price is calculated Successfully",true);
+	}
 
+	@AfterTest
+	public void terminateTest()
+	{
+		closeBrowser();
 	}
 }
