@@ -1,12 +1,13 @@
 package optimusShoppingCartPages;
 
-import browserSetUp.BrowserInitialization;
+import baseSetUp.BrowserInitialization;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import seleniumUtils.SeleniumUtil;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -23,8 +24,9 @@ public class SearchResultsPage  extends BrowserInitialization
 	public WebElement productPrice;
 
 
-	public SearchResultsPage()
+	public SearchResultsPage(WebDriver driver)
 	{
+		this.driver= driver;
 		PageFactory.initElements(driver,this);
 	}
 
@@ -44,8 +46,7 @@ public class SearchResultsPage  extends BrowserInitialization
 		if(searchResultsList.size()!=0)
 		{ Reporter.log("Search results are displayed", true);
 			Reporter.log("Clicking on "+seleniumGetText(searchResultsList.get(0))+" product links page",true);
-			SeleniumUtil.seleniumClick(searchResultsList.get(0));
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);}
+			seleniumClick(searchResultsList.get(0)); }
 		else { Reporter.log("Search results are not displayed",true); }
 
 	}

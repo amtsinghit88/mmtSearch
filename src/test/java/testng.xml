@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="All Test Suite" parallel="tests" thread-count="4" verbose="1" >
+    <!--<listeners>-->
+        <!--<listener class-name="listeners.ItestListenerseners"/>-->
+    <!--</listeners>>-->
+    <test name="FirstTestCase">
+        <classes>
+            <class name="optimusEcart.ShoppingCart">
+            </class>
+            <methods>
+                <include name="verifyAddFeaturedItemsToCart" />
+            </methods>
+        </classes>
+    </test>
+    <test name="SecondTestCase">
+        <classes>
+            <class name="optimusEcart.ShoppingCart">
+                <methods>
+                    <include name="verifyAddItemsToCart" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ThirdTestCase">
+        <classes>
+            <class name="optimusEcart.ShoppingCart">
+                <methods>
+                    <include name="verifyAddDifferentSizeItemsToCart" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="FourthTestCase">
+        <classes>
+            <class name="optimusEcart.ShoppingCart">
+                <methods>
+                    <include name="verifyProductPrice" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

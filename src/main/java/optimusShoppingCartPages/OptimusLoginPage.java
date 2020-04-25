@@ -1,14 +1,13 @@
 package optimusShoppingCartPages;
 
-import browserSetUp.BrowserInitialization;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.Keys;
+import baseSetUp.BrowserInitialization;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
-import seleniumUtils.SeleniumUtil;
+
+import java.io.IOException;
 
 import static seleniumUtils.SeleniumUtil.*;
 
@@ -25,8 +24,9 @@ public class OptimusLoginPage extends BrowserInitialization
 	@FindBy(name = "commit")
 	public WebElement submittBtn;
 
-	public OptimusLoginPage()
+	public OptimusLoginPage(WebDriver driver)
 	{
+		this.driver= driver;
 		PageFactory.initElements(driver,this);
 	}
 
@@ -38,8 +38,11 @@ public class OptimusLoginPage extends BrowserInitialization
 	public void clickEnterUsingPasswordBtn()
 	{
 
-		if (isElementDisplayed(enterUsingPasswordButton)){
-		seleniumClick(enterUsingPasswordButton);}
+		if (isElementDisplayed(enterUsingPasswordButton))
+		{
+			Reporter.log("Clicking on Enter using password button",true);
+			seleniumClick(enterUsingPasswordButton);
+		}
 		else
 			{
 				Reporter.log(enterUsingPasswordButton+ "Element is not visible ",true);
@@ -49,14 +52,16 @@ public class OptimusLoginPage extends BrowserInitialization
 
 	public void enterPassword()
 	{
-		if(isElementDisplayed(enterPasswordTextBox)){
-        seleniumClick(enterPasswordTextBox);
-        Reporter.log("Submitting the password",true);
-        seleniumEnterText(enterPasswordTextBox,"idgad");}
-		else{
-			Reporter.log(enterPasswordTextBox+ "Element is not visible ",true);
+		if(isElementDisplayed(enterPasswordTextBox))
+		{
+			seleniumClick(enterPasswordTextBox);
+			Reporter.log("Entering password on login page",true);
+        seleniumEnterText(enterPasswordTextBox,"idgad");
 		}
-       // enterPasswordTextBox.sendKeys(Keys.ENTER);
+		else
+			{
+			    Reporter.log(enterPasswordTextBox+ "Element is not visible ",true);
+			}
 	}
 
 }

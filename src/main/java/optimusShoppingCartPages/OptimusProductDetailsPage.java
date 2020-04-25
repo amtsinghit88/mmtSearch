@@ -1,15 +1,13 @@
 package optimusShoppingCartPages;
 
-import browserSetUp.BrowserInitialization;
-import com.sun.org.apache.regexp.internal.RE;
+import baseSetUp.BrowserInitialization;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
-import seleniumUtils.SeleniumUtil;
 
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
 
 import static seleniumUtils.SeleniumUtil.*;
 
@@ -33,8 +31,9 @@ public class OptimusProductDetailsPage extends BrowserInitialization
 	@FindBy(xpath = "//a[@class = 'cart-popup__cta-link btn btn--secondary-accent']")
     public WebElement viewCartbtn;
 
-	public OptimusProductDetailsPage()
+	public OptimusProductDetailsPage(WebDriver driver)
 	{
+		this.driver= driver;
 		PageFactory.initElements(driver,this);
 	}
 
@@ -52,7 +51,9 @@ public class OptimusProductDetailsPage extends BrowserInitialization
 	{
 		waitForElementVisiblity(driver,addToCartBtn,5);
 		if(isElementDisplayed(addToCartBtn))
-		{ seleniumClick(addToCartBtn);
+		{
+			Reporter.log("Going to click on add to cart button",true);
+			seleniumClick(addToCartBtn);
 		Reporter.log(getItemName()+"Adding items to cart ",true);}
 		else{
 			Reporter.log(addToCartBtn+ " Element is not displayed ", true);
@@ -65,7 +66,7 @@ public class OptimusProductDetailsPage extends BrowserInitialization
         waitForElementVisiblity(driver,productSize,5);
         if (isElementDisplayed(productSize))
         {
-       	   seleniumClick(productSize);
+			seleniumClick(productSize);
 		   size = getSelectedOption(productSize);
         }
         else {Reporter.log("Select item size dropdown is not displayed",true); }

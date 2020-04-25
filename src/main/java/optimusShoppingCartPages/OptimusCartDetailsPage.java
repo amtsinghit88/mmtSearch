@@ -1,13 +1,12 @@
 package optimusShoppingCartPages;
 
-import browserSetUp.BrowserInitialization;
+import baseSetUp.BrowserInitialization;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import java.util.concurrent.TimeUnit;
 
 import static seleniumUtils.SeleniumUtil.*;
 import static seleniumUtils.SeleniumUtil.seleniumGetAttributValue;
@@ -33,7 +32,11 @@ public class OptimusCartDetailsPage extends BrowserInitialization {
 	public WebElement itemSize;
 
 
-	public OptimusCartDetailsPage() { PageFactory.initElements(driver,this); }
+	public OptimusCartDetailsPage(WebDriver driver)
+	{
+		this.driver= driver;
+		PageFactory.initElements(driver,this);
+	}
 
 	public String cartPageTitle() { return driver.getTitle(); }
 

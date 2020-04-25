@@ -1,12 +1,13 @@
 package optimusShoppingCartPages;
 
-import browserSetUp.BrowserInitialization;
+import baseSetUp.BrowserInitialization;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import seleniumUtils.SeleniumUtil;
 
+import java.io.IOException;
 import java.util.List;
 
 import static seleniumUtils.SeleniumUtil.*;
@@ -28,7 +29,9 @@ public class OptimusHomePage extends BrowserInitialization
 	@FindBy(xpath = "//div[text() = 'RoundNeck Shirt 14']")
 	public WebElement featureItemName;
 
-	public OptimusHomePage() { PageFactory.initElements(driver,this); }
+	public OptimusHomePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver,this); }
 
 	public String getHomePageheader()
 	{
@@ -43,7 +46,7 @@ public class OptimusHomePage extends BrowserInitialization
 	public void clickOnSearchIcon()
 	{
 		if(isElementDisplayed(searchIcon)) {
-			Reporter.log("User is on Optimus homepage",true);
+			Reporter.log("Going TO click on the search icon on home page",true);
 			seleniumClick(searchIcon);}
 		else { Reporter.log(searchIcon+ "Element is not visible ",true); }
 	}
@@ -61,7 +64,7 @@ public class OptimusHomePage extends BrowserInitialization
 	{
 		if(featuredItemsCollectionList.size()!=0){Reporter.log("Featured item list is displayed", true);
 			Reporter.log(seleniumGetText(featureItemName)+" Clicking on product links page",true);
-			SeleniumUtil.seleniumClick(featuredItemsCollectionList.get(0));}
+			seleniumClick(featuredItemsCollectionList.get(0));}
 		else{ Reporter.log(featuredItemsCollectionList +"No such element is displayed",true);}
 	}
 
