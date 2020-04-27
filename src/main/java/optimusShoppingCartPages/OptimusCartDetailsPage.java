@@ -1,6 +1,6 @@
 package optimusShoppingCartPages;
 
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import org.testng.Reporter;
 import static seleniumUtils.SeleniumUtil.*;
 import static seleniumUtils.SeleniumUtil.seleniumGetAttributValue;
 
-public class OptimusCartDetailsPage extends BrowserInitialization {
+public class OptimusCartDetailsPage extends BrowserSetUp {
 
 	@FindBy(className = "cart__product-title")
 	public WebElement addedItemName;

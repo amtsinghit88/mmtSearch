@@ -1,10 +1,9 @@
 package optimusEcart;
 
 import JavaUtils.JavaUtils;
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import listeners.ItestListeners;
 import optimusShoppingCartPages.*;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -14,7 +13,7 @@ import org.testng.annotations.Listeners;
 import java.io.IOException;
 
 @Listeners(ItestListeners.class)
-public class ShoppingCart extends BrowserInitialization
+public class ShoppingCart extends BrowserSetUp
 {
 	OptimusLoginPage optimusLoginPage;
 	OptimusHomePage optimusHomePage;
@@ -24,14 +23,15 @@ public class ShoppingCart extends BrowserInitialization
 	String itemName= "";
 
 	@BeforeMethod
-	public void openFeaturedItemsdetails()
+	@Parameters({"password"})
+	public void openFeaturedItemsDetails(String password)
 	{
 
 		driver = launchApplication();
 		optimusLoginPage = new OptimusLoginPage(driver);
 		Reporter.log("Optimus e-cart Application is open"+ optimusLoginPage.getPageTitle(),true);
 		optimusLoginPage.clickEnterUsingPasswordBtn();
-		optimusLoginPage.enterPassword();
+		optimusLoginPage.enterPassword(password);
 		optimusHomePage = new OptimusHomePage(driver);
 		Reporter.log("Optimus Homepage is displayed"+ optimusHomePage.getHomePageheader(),true);
 	}

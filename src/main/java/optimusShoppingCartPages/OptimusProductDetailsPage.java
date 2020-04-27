@@ -1,17 +1,15 @@
 package optimusShoppingCartPages;
 
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import java.io.IOException;
-
 import static seleniumUtils.SeleniumUtil.*;
 
-public class OptimusProductDetailsPage extends BrowserInitialization
+public class OptimusProductDetailsPage extends BrowserSetUp
 {
 	@FindBy(name = "add")
 	public WebElement addToCartBtn;

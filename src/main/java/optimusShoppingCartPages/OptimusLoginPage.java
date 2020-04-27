@@ -1,18 +1,16 @@
 package optimusShoppingCartPages;
 
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import java.io.IOException;
-
 import static seleniumUtils.SeleniumUtil.*;
 
 
-public class OptimusLoginPage extends BrowserInitialization
+public class OptimusLoginPage extends BrowserSetUp
 {
 
 	@FindBy(xpath = "//div[@class = 'password-login']/a")
@@ -50,13 +48,13 @@ public class OptimusLoginPage extends BrowserInitialization
 	}
 
 
-	public void enterPassword()
+	public void enterPassword(String password)
 	{
 		if(isElementDisplayed(enterPasswordTextBox))
 		{
 			seleniumClick(enterPasswordTextBox);
 			Reporter.log("Entering password on login page",true);
-        seleniumEnterText(enterPasswordTextBox,"idgad");
+        seleniumEnterText(enterPasswordTextBox, password);
 		}
 		else
 			{

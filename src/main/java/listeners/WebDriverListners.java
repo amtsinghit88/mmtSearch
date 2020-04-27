@@ -1,16 +1,15 @@
 package listeners;
 
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import fileReaderUtils.PropertiesFileReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Calendar;
 
-public class WebDriverListners extends BrowserInitialization implements WebDriverEventListener {
+public class WebDriverListners extends BrowserSetUp implements WebDriverEventListener   {
 
 	PropertiesFileReader fileReader = new PropertiesFileReader();
 	@Override

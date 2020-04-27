@@ -1,19 +1,17 @@
 package optimusShoppingCartPages;
 
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static seleniumUtils.SeleniumUtil.*;
 
-public class SearchResultsPage  extends BrowserInitialization
+public class SearchResultsPage  extends BrowserSetUp
 {
 
 	@FindBy(xpath = "//a[@class = 'full-width-link']")

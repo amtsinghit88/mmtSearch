@@ -1,18 +1,17 @@
 package optimusShoppingCartPages;
 
-import baseSetUp.BrowserInitialization;
+import baseSetUp.BrowserSetUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import java.io.IOException;
 import java.util.List;
 
 import static seleniumUtils.SeleniumUtil.*;
 
-public class OptimusHomePage extends BrowserInitialization
+public class OptimusHomePage extends BrowserSetUp
 {
 	@FindBy(xpath = "//a[@class ='site-header__logo-link']")
 	public WebElement homePageTitle;
