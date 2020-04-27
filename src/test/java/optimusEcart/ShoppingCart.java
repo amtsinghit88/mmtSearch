@@ -58,11 +58,12 @@ public class ShoppingCart extends BrowserSetUp
 
 
     @Test(priority = 2)
-	public void verifyAddItemsToCart()
+	@Parameters({"productName"})
+	public void verifyAddItemsToCart(String searchIemName)
 	{
 		optimusHomePage = new OptimusHomePage(driver);
 		optimusHomePage.clickOnSearchIcon();
-		optimusHomePage.enterTextInSearchBox("shirt");
+		optimusHomePage.enterTextInSearchBox(searchIemName);
 		Reporter.log("Optimus search results page is displayed",true);
 		optimusSrp = new SearchResultsPage(driver);
 		cartPage = new OptimusCartDetailsPage(driver);
@@ -101,12 +102,13 @@ public class ShoppingCart extends BrowserSetUp
 	}
 
 	@Test(priority = 4)
-	public void verifyProductPrice()
+	@Parameters({"searchIemName"})
+	public void verifyProductPrice(String searchIemName)
 	{
 		JavaUtils util = new JavaUtils();
 		optimusHomePage= new OptimusHomePage(driver);
 		optimusHomePage.clickOnSearchIcon();
-		optimusHomePage.enterTextInSearchBox("shirt");
+		optimusHomePage.enterTextInSearchBox(searchIemName);
 		Reporter.log("Optimus search results page is displayed",true);
 		optimusSrp = new SearchResultsPage(driver);
 		optimusSrp.openProudctDetailsPage();

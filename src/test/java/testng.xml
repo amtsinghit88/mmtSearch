@@ -16,6 +16,7 @@
     </test>
     <test name="Verify search items and add to cart">
         <parameter name="password" value="idgad"/>
+        <parameter name="searchItemName" value="shirt"/>
         <classes>
             <class name="optimusEcart.ShoppingCart">
                 <methods>
@@ -36,6 +37,7 @@
     </test>
     <test name="Verify product price by changing item quantity in cart">
         <parameter name="password" value="idgad"/>
+        <parameter name="searchItemName" value="shirt"/>
         <classes>
             <class name="optimusEcart.ShoppingCart">
                 <methods>
