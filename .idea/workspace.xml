@@ -2,7 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2022b2cd-6c18-4999-829f-77fb5feff8a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SeleniumUtils/SeleniumUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/SeleniumUtils/SeleniumUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/baseSetUp/BrowserInitialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fileReaderUtils/PropertiesFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fileReaderUtils/PropertiesFileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/ItestListeners.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/ItestListeners.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/WebDriverListners.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/WebDriverListners.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusCartDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusCartDetailsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusHomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusLoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusLoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusProductDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusProductDetailsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/SearchResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/SearchResultsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/optimusEcart/ShoppingCart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/ui-automation-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/ui-automation-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/geckodriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/geckodriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/newchromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/newchromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/baseSetUp/BrowserSetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/baseSetUp/BrowserSetUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/fileReaderUtils/PropertiesFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/fileReaderUtils/PropertiesFileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/seleniumUtils/SeleniumUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/seleniumUtils/SeleniumUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/com.optimus.myshopify.ui-automation.test/optimusEcart/ShoppingCart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,19 +104,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="303">
+              <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding>
                 <element signature="method#getAddedItemname#0;class#OptimusCartDetailsPage#0" />
               </folding>
@@ -82,10 +116,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+            <state relative-caret-position="618">
+              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/SearchResultsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="47" column="71" lean-forward="true" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -93,17 +184,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="61" column="58" lean-forward="true" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+            <state relative-caret-position="525">
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -111,55 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/listeners/WebDriverListners.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="73" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#beforeAlertAccept#0;class#WebDriverListners#0" />
-                <element signature="method#afterAlertAccept#0;class#WebDriverListners#0" />
-                <element signature="method#afterAlertDismiss#0;class#WebDriverListners#0" />
-                <element signature="method#beforeAlertDismiss#0;class#WebDriverListners#0" />
-                <element signature="method#beforeNavigateTo#0;class#WebDriverListners#0" />
-                <element signature="method#afterNavigateTo#0;class#WebDriverListners#0" />
-                <element signature="method#beforeNavigateBack#0;class#WebDriverListners#0" />
-                <element signature="method#afterNavigateBack#0;class#WebDriverListners#0" />
-                <element signature="method#beforeNavigateForward#0;class#WebDriverListners#0" />
-                <element signature="method#afterNavigateForward#0;class#WebDriverListners#0" />
-                <element signature="method#beforeNavigateRefresh#0;class#WebDriverListners#0" />
-                <element signature="method#afterNavigateRefresh#0;class#WebDriverListners#0" />
-                <element signature="method#beforeFindBy#0;class#WebDriverListners#0" />
-                <element signature="method#afterFindBy#0;class#WebDriverListners#0" />
-                <element signature="method#beforeClickOn#0;class#WebDriverListners#0" />
-                <element signature="method#beforeChangeValueOf#0;class#WebDriverListners#0" />
-                <element signature="method#afterChangeValueOf#0;class#WebDriverListners#0" />
-                <element signature="method#beforeScript#0;class#WebDriverListners#0" />
-                <element signature="method#afterScript#0;class#WebDriverListners#0" />
-                <element signature="method#beforeSwitchToWindow#0;class#WebDriverListners#0" />
-                <element signature="method#afterSwitchToWindow#0;class#WebDriverListners#0" />
-                <element signature="method#onException#0;class#WebDriverListners#0" />
-                <element signature="method#beforeGetScreenshotAs#0;class#WebDriverListners#0" />
-                <element signature="method#afterGetScreenshotAs#0;class#WebDriverListners#0" />
-                <element signature="method#beforeGetText#0;class#WebDriverListners#0" />
-                <element signature="method#afterGetText#0;class#WebDriverListners#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Config.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="55" lean-forward="true" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+            <state relative-caret-position="588">
+              <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -185,8 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/SeleniumUtils/SeleniumUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BrowserSetUp/BrowserInitialiation.java" />
         <option value="$PROJECT_DIR$/src/test/resources/Config.properties" />
         <option value="$PROJECT_DIR$/src/test/java/FileReaderUtils/FileReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/BrowserSetUp/BrowserInitialization.java" />
@@ -207,8 +240,6 @@
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/VerifyProductPrice.java" />
         <option value="$PROJECT_DIR$/src/test/testNgListeners/Listeners.java" />
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/TestClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/ExtenReportNg.kt" />
         <option value="$PROJECT_DIR$/src/main/java/ExtenReporterNg.java" />
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/ExtentReporterNg.java" />
@@ -216,10 +247,7 @@
         <option value="$PROJECT_DIR$/test-output/emailable-report.html" />
         <option value="$PROJECT_DIR$/test-output/testng-failed.xml" />
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/Listeners.java" />
-        <option value="$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/SearchResultsPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/listeners/Listeners.java" />
         <option value="$PROJECT_DIR$/src/test/java/listeners/WebDriverListners.java" />
         <option value="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserInitialization.java" />
@@ -229,15 +257,24 @@
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/Test2.java" />
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/Test1.java" />
         <option value="$PROJECT_DIR$/src/main/java/listeners/WebDriverListners.java" />
-        <option value="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/Config.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Testt1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testng.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/Config.properties" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="794" />
@@ -250,12 +287,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="screenshots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
@@ -267,6 +321,45 @@
               <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baseSetUp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fileReaderUtils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaUtils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ui-automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="optimusShoppingCartPages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ui-automation" type="b2602c69:ProjectViewProjectNode" />
@@ -300,13 +393,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587967188646" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591691893118" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -314,9 +405,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/test/java" />
       <recent name="$PROJECT_DIR$/src/test/java/optimusEcart" />
-      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
@@ -340,6 +431,13 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG./Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml">
+    <configuration name="Testt1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Testt1" />
+      <module name="com.optimus.myshopify.ui-automation.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ui-automation [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -378,7 +476,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ShoppingCart.verifyAddFeaturedItemsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTest.verifyAddFeaturedItemsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.optimus.myshopify.ui-automation.test" />
       <extension name="coverage">
         <pattern>
@@ -387,24 +485,11 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="optimusEcart" />
-      <option name="MAIN_CLASS_NAME" value="optimusEcart.ShoppingCart" />
+      <option name="MAIN_CLASS_NAME" value="optimusEcart.ShoppingCartTest" />
       <option name="METHOD_NAME" value="verifyAddFeaturedItemsToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test1 and 1 more" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.optimus.myshopify.ui-automation.test" />
-      <option name="TEST_OBJECT" value="PATTERN" />
-      <properties />
-      <listeners />
-      <patterns>
-        <pattern testClass="optimusEcart.Test1" />
-        <pattern testClass="optimusEcart.Test2" />
-      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -430,19 +515,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Testt1" />
       <item itemvalue="Gradle.ui-automation [clean]" />
       <item itemvalue="Gradle.ui-automation [build]" />
       <item itemvalue="TestNG./Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" />
-      <item itemvalue="TestNG.Test1 and 1 more" />
-      <item itemvalue="TestNG.ShoppingCart.verifyAddFeaturedItemsToCart" />
+      <item itemvalue="TestNG.ShoppingCartTest.verifyAddFeaturedItemsToCart" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" />
-        <item itemvalue="TestNG.ShoppingCart.verifyAddFeaturedItemsToCart" />
+        <item itemvalue="TestNG.ShoppingCartTest.verifyAddFeaturedItemsToCart" />
+        <item itemvalue="Application.Testt1" />
         <item itemvalue="Gradle.ui-automation [build]" />
         <item itemvalue="Gradle.ui-automation [clean]" />
-        <item itemvalue="TestNG.Test1 and 1 more" />
       </list>
     </recent_temporary>
   </component>
@@ -460,15 +545,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_abhishek_Downloads_ui-automation_src_test_java_testng_xml - 2020.04.25 at 16h 34m 27s.xml">
-      <configuration name="/Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_abhishek_Downloads_ui-automation_src_test_java_testng_xml - 2020.04.25 at 16h 54m 40s.xml">
-      <configuration name="/Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_abhishek_Downloads_ui-automation_src_test_java_testng_xml - 2020.04.25 at 18h 35m 38s.xml">
-      <configuration name="/Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_Users_abhishek_Downloads_ui-automation_src_test_java_testng_xml - 2020.04.25 at 18h 36m 53s.xml">
       <configuration name="/Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" configurationId="TestNG" />
     </history-entry>
@@ -490,12 +566,21 @@
     <history-entry file="_Users_abhishek_Downloads_ui-automation_src_test_java_testng_xml - 2020.04.27 at 11h 16m 45s.xml">
       <configuration name="/Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ShoppingCartTest_verifyAddFeaturedItemsToCart - 2020.06.09 at 13h 20m 44s.xml">
+      <configuration name="ShoppingCartTest.verifyAddFeaturedItemsToCart" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ShoppingCartTest_verifyAddFeaturedItemsToCart - 2020.06.09 at 13h 21m 43s.xml">
+      <configuration name="ShoppingCartTest.verifyAddFeaturedItemsToCart" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_abhishek_Downloads_ui-automation_src_test_java_testng_xml - 2020.06.09 at 13h 24m 36s.xml">
+      <configuration name="/Users/abhishek/Downloads/ui-automation/src/test/java/testng.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="794" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.26108727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.27539343" />
       <window_info id="Structure" order="1" sideWeight="0.5014245" side_tool="true" weight="0.34477827" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -504,16 +589,16 @@
       <window_info id="Favorites" order="6" sideWeight="0.5014245" side_tool="true" weight="0.2539342" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3846154" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38433734" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3974359" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21082622" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.5048193" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.27635327" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.5868946" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.23373494" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.586747" />
       <window_info anchor="bottom" id="Thumbnails" order="12" visible="true" weight="0.32905984" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -562,25 +647,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java</url>
-          <line>70</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java</url>
-          <line>79</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java</url>
-          <line>70</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java</url>
-          <line>66</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="105" />
         </line-breakpoint>
@@ -591,20 +676,20 @@
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java</url>
           <line>121</line>
           <properties />
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java</url>
           <line>109</line>
           <properties />
           <option name="timeStamp" value="160" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java</url>
-          <line>48</line>
+          <line>47</line>
           <properties />
           <option name="timeStamp" value="161" />
         </line-breakpoint>
@@ -615,25 +700,25 @@
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java</url>
           <line>32</line>
           <properties />
           <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java</url>
-          <line>41</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java</url>
-          <line>47</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="165" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java</url>
           <line>29</line>
           <properties />
           <option name="timeStamp" value="166" />
@@ -648,38 +733,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.14.3/bfd2538501a129a142fe8366169c48b91609dc0b/testng-6.14.3-sources.jar!/org/testng/TestNG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="948" selection-start-line="948" selection-end-line="948" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-output/html/reportng.js" />
-    <entry file="file://$PROJECT_DIR$/test-output/html/suite1_test1_results.html" />
-    <entry file="file://$PROJECT_DIR$/test-output/html/suites.html" />
-    <entry file="file://$PROJECT_DIR$/test-output/html/index.html" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.14.3/bfd2538501a129a142fe8366169c48b91609dc0b/testng-6.14.3-sources.jar!/org/testng/ITestNGListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.14.3/bfd2538501a129a142fe8366169c48b91609dc0b/testng-6.14.3-sources.jar!/org/testng/IAttributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/8e9423038552821844ba5f7713cc4c1e6d9835b7/selenium-api-3.141.59-sources.jar!/org/openqa/selenium/TakesScreenshot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -720,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/SearchResultsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="47" column="110" selection-start-line="47" selection-start-column="110" selection-end-line="47" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.141.59/7e42f1c3e43d22f2c299b74356137dc6f2f455ec/selenium-support-3.141.59-sources.jar!/org/openqa/selenium/support/events/EventFiringWebDriver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -738,16 +784,6 @@
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/[[ChromeDriver: chrome on MAC (85a68395b4e72d096c7ce536b3bb3cd3)] -&gt; name: add]Screenshot-1587798202451.jpg" />
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/[[ChromeDriver: chrome on MAC (85a68395b4e72d096c7ce536b3bb3cd3)] -&gt; id: Password]Screenshot-1587798189611.jpg" />
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/[[ChromeDriver: chrome on MAC (85a68395b4e72d096c7ce536b3bb3cd3)] -&gt; id: Password]Screenshot-1587798189083.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="method#seleniumSubmittext#0;class#SeleniumUtil#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/[[ChromeDriver: chrome on MAC (2f939fd9c737a756f83102bc0d2c5732)] -&gt; id: Password]Screenshot-1587798712766.jpg" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -756,27 +792,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/Screenshot-1587799654278.jpg" />
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/[[ChromeDriver: chrome on MAC (2f939fd9c737a756f83102bc0d2c5732)] -&gt; id: Password]Screenshot-1587798713295.jpg" />
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/[[ChromeDriver: chrome on MAC (2f939fd9c737a756f83102bc0d2c5732)] -&gt; name: add]Screenshot-1587798719457.jpg" />
     <entry file="file://$PROJECT_DIR$/screenshots/FailureScreenshots/verifyProductPriceScreenshot-1587799866831.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/Screenshot-1587800465694.jpg" />
     <entry file="file://$PROJECT_DIR$/src/test/java/optimusEcart/Test2.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/optimusEcart/Test1.java" />
@@ -800,23 +819,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test-output/All Test Suite/testng-failed.xml" />
     <entry file="file://$PROJECT_DIR$/test-output/testng-failed.xml" />
-    <entry file="file://$PROJECT_DIR$/test-output/emailable-report.html">
+    <entry file="file://$PROJECT_DIR$/test-output/emailable-report.html" />
+    <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/Screenshot-1587813852682.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Test1.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/8e9423038552821844ba5f7713cc4c1e6d9835b7/selenium-api-3.141.59-sources.jar!/org/openqa/selenium/WebElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="68" lean-forward="true" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+        <state relative-caret-position="225">
+          <caret line="193" column="10" selection-start-line="193" selection-start-column="10" selection-end-line="193" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/Screenshot-1587813852682.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.141.59/7e42f1c3e43d22f2c299b74356137dc6f2f455ec/selenium-support-3.141.59-sources.jar!/org/openqa/selenium/support/ui/ExpectedConditions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="method#getAddedItemname#0;class#OptimusCartDetailsPage#0" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="295" column="46" selection-start-line="295" selection-start-column="46" selection-end-line="295" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -856,45 +872,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Testt1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JavaUtils/JavaUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="375">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Config.properties">
+    <entry file="file://$PROJECT_DIR$/screenshots/ActionScreenshots/Screenshot-1591689264946.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="55" lean-forward="true" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        <state relative-caret-position="588">
+          <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="618">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testng.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="795">
+          <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/SearchResultsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="61" column="58" lean-forward="true" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+        <state relative-caret-position="480">
+          <caret line="47" column="71" lean-forward="true" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="method#getAddedItemname#0;class#OptimusCartDetailsPage#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -955,6 +1048,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

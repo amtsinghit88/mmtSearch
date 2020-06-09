@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 import listeners.WebDriverListners;
 
+
 public class BrowserSetUp
 {
 	public  WebDriver driver;
@@ -27,22 +28,13 @@ public class BrowserSetUp
 	{
 		PropertiesFileReader fis = new PropertiesFileReader();
 		fis.getPropertyFile();
-		ChromeOptions options = new ChromeOptions();
-		options.setHeadless(true);
-		String browserName= fis.prop.getProperty("browser");
-		if (browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", PropertiesFileReader.prop.getProperty("chromedriverpath"));
-			this.driver= new ChromeDriver(options);
+		driver = new  DriverBuilder(fis.getBrowserType()).getWebDriver();
+			this.driver= new  DriverBuilder(fis.getBrowserType()).getWebDriver();
 		    eventWebDriver = new EventFiringWebDriver(this.driver);
-		     eventListener = new WebDriverListners();
-	         eventWebDriver.register(eventListener);
-		}
-		else if(browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", PropertiesFileReader.prop.getProperty("firfoxdriverpath"));
-			this.driver = new FirefoxDriver();
-		}
+		    eventListener = new WebDriverListners();
+		    eventWebDriver.register(eventListener);
 		this.eventWebDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get(PropertiesFileReader.prop.getProperty("url"));
+		driver.get(fis.getUrl());
 		driver.manage().window().maximize();
 		Reporter.log(driver.getTitle(),true);
 		return  eventWebDriver;

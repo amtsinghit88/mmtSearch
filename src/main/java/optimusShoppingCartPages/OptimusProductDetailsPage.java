@@ -48,49 +48,32 @@ public class OptimusProductDetailsPage extends BrowserSetUp
 	public void clickAddToCartBtn()
 	{
 		waitForElementVisiblity(driver,addToCartBtn,5);
-		if(isElementDisplayed(addToCartBtn))
-		{
 			Reporter.log("Going to click on add to cart button",true);
 			seleniumClick(addToCartBtn);
-		Reporter.log(getItemName()+"Adding items to cart ",true);}
-		else{
-			Reporter.log(addToCartBtn+ " Element is not displayed ", true);
-		}
+		Reporter.log(getItemName()+"Adding items to cart ",true);
 	}
 
 	public String getSelectedItemSize()
 	{
 		String size = "";
         waitForElementVisiblity(driver,productSize,5);
-        if (isElementDisplayed(productSize))
-        {
-			seleniumClick(productSize);
-		   size = getSelectedOption(productSize);
-        }
-        else {Reporter.log("Select item size dropdown is not displayed",true); }
+        seleniumClick(productSize);
+        size = getSelectedOption(productSize);
        return size;
 	}
 
 	public void selectItemSize(String sizeValue)
 	{
 		waitForElementVisiblity(driver,productSize,5);
-		if (isElementDisplayed(productSize))
-		{
-			seleniumClick(productSize);
-			selectDropdownValue(productSize,sizeValue);
-			Reporter.log("Going to add item into cart with size "+sizeValue,true);
-		}
-		else{Reporter.log("Select item size dropdown is not displayed",true);}
+		seleniumClick(productSize);
+		selectDropdownValue(productSize,sizeValue);
+		Reporter.log("Going to add item into cart with size "+sizeValue,true);
 	}
 
 	public void clickViewCartBtn()
 	{
 		waitForElementVisiblity(driver,viewCartbtn,5);
-		if (isElementDisplayed(viewCartbtn))
-		{ seleniumClick(viewCartbtn);
-		Reporter.log("Navigating to the optimus cart details page",true);}
-		else {
-			Reporter.log(viewCartbtn+ " Element is not displayed ", true);
-		}
+		seleniumClick(viewCartbtn);
+		Reporter.log("Navigating to the optimus cart details page",true);
 	}
 }

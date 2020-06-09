@@ -35,31 +35,17 @@ public class OptimusLoginPage extends BrowserSetUp
 
 	public void clickEnterUsingPasswordBtn()
 	{
-
-		if (isElementDisplayed(enterUsingPasswordButton))
-		{
-			Reporter.log("Clicking on Enter using password button",true);
-			seleniumClick(enterUsingPasswordButton);
-		}
-		else
-			{
-				Reporter.log(enterUsingPasswordButton+ "Element is not visible ",true);
-	        }
+		Reporter.log("Clicking on Enter using password button",true);
+		seleniumClick(enterUsingPasswordButton);
 	}
 
 
 	public void enterPassword(String password)
 	{
-		if(isElementDisplayed(enterPasswordTextBox))
-		{
-			seleniumClick(enterPasswordTextBox);
-			Reporter.log("Entering password on login page",true);
+		seleniumClick(enterPasswordTextBox);
+		Reporter.log("Entering password on login page",true);
         seleniumEnterText(enterPasswordTextBox, password);
-		}
-		else
-			{
-			    Reporter.log(enterPasswordTextBox+ "Element is not visible ",true);
-			}
+
 	}
 
 }

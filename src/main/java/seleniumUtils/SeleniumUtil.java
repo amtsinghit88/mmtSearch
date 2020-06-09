@@ -27,7 +27,7 @@ public class SeleniumUtil
 		   new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(ele));
 		   return true;
 	   } catch (Exception e) {
-		   Reporter.log("Element is not visible after waitng after " + time + " seconds.");
+		   Reporter.log("Element is not visible waitng after " + time + " seconds.");
 		   Reporter.log(""+ele);
 		   return false;
 	   }
@@ -65,8 +65,8 @@ public class SeleniumUtil
 		}
 	}
 
-	public static void seleniumSubmittext(WebElement ele)
-	{
+	public static void seleniumSubmitText(WebElement ele)
+		{
 		try
 		{
 			if (ele.isDisplayed())

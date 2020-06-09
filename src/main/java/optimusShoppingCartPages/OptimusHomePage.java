@@ -38,25 +38,21 @@ public class OptimusHomePage extends BrowserSetUp
 		waitForElementVisiblity(driver,homePageTitle,5);
 		if(isElementDisplayed(homePageTitle)) {
 		pageTitle = seleniumGetText(homePageTitle); }
-	    else { Reporter.log("Displaying Optimus home page",true); }
+	    else { Reporter.log("Optimus home page is not displayed",true); }
 	    return pageTitle;
 	}
 
 	public void clickOnSearchIcon()
 	{
-		if(isElementDisplayed(searchIcon)) {
-			Reporter.log("Going TO click on the search icon on home page",true);
-			seleniumClick(searchIcon);}
-		else { Reporter.log(searchIcon+ "Element is not visible ",true); }
+		Reporter.log("Going T0 click on the search icon on home page",true);
+		seleniumClick(searchIcon);
 	}
 
 	public void enterTextInSearchBox(String product)
 	{
-		if(isElementDisplayed(searchTextBox))
-		{Reporter.log("Entering the product name for search",true);
-			seleniumEnterText(searchTextBox,product);
-		Reporter.log("Submitted for search" + product);}
-		else{ Reporter.log(searchTextBox+ "Element is not visible ",true); }
+		Reporter.log("Entering the product name for search",true);
+		seleniumEnterText(searchTextBox,product);
+		Reporter.log("Submitted for search" + product);
 	}
 
 	public void clickFeaturedItemlink()
@@ -70,11 +66,8 @@ public class OptimusHomePage extends BrowserSetUp
 	public String getFeaturedItemName()
 	{
 		String itemName= "";
-		if(isElementDisplayed(featureItemName))
-		{ Reporter.log(seleniumGetText(featureItemName)+" link is displayed",true);
+		Reporter.log(seleniumGetText(featureItemName)+" link is displayed",true);
 		   itemName = seleniumGetText(featureItemName);
-		}
-		else{Reporter.log(featureItemName+"No such element is displayed",true);}
 		return itemName;
 	}
 

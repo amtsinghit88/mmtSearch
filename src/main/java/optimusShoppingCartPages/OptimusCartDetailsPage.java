@@ -64,15 +64,9 @@ public class OptimusCartDetailsPage extends BrowserSetUp {
 	{
 		String size= "";
 		waitForElementVisiblity(driver,itemSize,5);
-		if (isElementDisplayed(itemSize))
-		{
-			Reporter.log("Getting cart item size",true);
-			String[] sizeArray =  seleniumGetText(itemSize).split(" ");
-			size = sizeArray[1];
-		}
-		else {
-			Reporter.log(seleniumGetText(itemSize) +"Item size is not displayed",true);
-		}
+		Reporter.log("Getting cart item size",true);
+		String[] sizeArray =  seleniumGetText(itemSize).split(" ");
+		size = sizeArray[1];
         return size;
 	}
 

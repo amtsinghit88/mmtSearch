@@ -4,10 +4,10 @@
     <!--<listeners>-->
         <!--<listener class-name="listeners.ItestListenerseners"/>-->
     <!--</listeners>>-->
-    <test name="Test for adding different sie items in cart">
+    <test name="Test for adding different size items in cart">
         <parameter name="password" value="idgad"/>
         <classes>
-            <class name="optimusEcart.ShoppingCart">
+            <class name="optimusEcart.ShoppingCartTest">
                 <methods>
                     <include name="verifyAddFeaturedItemsToCart" />
                 </methods>
@@ -18,7 +18,7 @@
         <parameter name="password" value="idgad"/>
         <parameter name="searchItemName" value="shirt"/>
         <classes>
-            <class name="optimusEcart.ShoppingCart">
+            <class name="optimusEcart.ShoppingCartTest">
                 <methods>
                     <include name="verifyAddItemsToCart" />
                 </methods>
@@ -28,7 +28,7 @@
     <test name="Change the product size on details page add items to cart">
         <parameter name="password" value="idgad"/>
         <classes>
-            <class name="optimusEcart.ShoppingCart">
+            <class name="optimusEcart.ShoppingCartTest">
                 <methods>
                     <include name="verifyAddDifferentSizeItemsToCart" />
                 </methods>
@@ -39,7 +39,7 @@
         <parameter name="password" value="idgad"/>
         <parameter name="searchItemName" value="shirt"/>
         <classes>
-            <class name="optimusEcart.ShoppingCart">
+            <class name="optimusEcart.ShoppingCartTest">
                 <methods>
                     <include name="verifyProductPrice" />
                 </methods>
