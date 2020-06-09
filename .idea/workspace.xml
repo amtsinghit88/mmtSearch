@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2022b2cd-6c18-4999-829f-77fb5feff8a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SeleniumUtils/SeleniumUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/SeleniumUtils/SeleniumUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/baseSetUp/BrowserInitialization.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fileReaderUtils/PropertiesFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fileReaderUtils/PropertiesFileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/ItestListeners.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/ItestListeners.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/WebDriverListners.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/WebDriverListners.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusCartDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusCartDetailsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusLoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusLoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusProductDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/OptimusProductDetailsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/SearchResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/optimusShoppingCartPages/SearchResultsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/optimusEcart/ShoppingCart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/ui-automation-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/ui-automation-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/Config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/geckodriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/geckodriver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/newchromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/newchromedriver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/baseSetUp/BrowserSetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/baseSetUp/BrowserSetUp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/fileReaderUtils/PropertiesFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/fileReaderUtils/PropertiesFileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/seleniumUtils/SeleniumUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/seleniumUtils/SeleniumUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/com.optimus.myshopify.ui-automation.test/optimusEcart/ShoppingCart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seleniumUtils/SeleniumUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/optimusEcart/ShoppingCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -103,10 +60,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
+            <state relative-caret-position="442">
               <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding>
                 <element signature="method#getAddedItemname#0;class#OptimusCartDetailsPage#0" />
@@ -163,11 +120,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/Config.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,15 +155,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/testng.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -397,7 +357,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591691893118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591692790144" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -578,9 +538,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.27539343" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.27539343" />
       <window_info id="Structure" order="1" sideWeight="0.5014245" side_tool="true" weight="0.34477827" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -594,8 +553,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.5048193" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27349398" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.23373494" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.586747" />
@@ -893,18 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-            <element signature="e#143#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/BrowserSetUp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -964,16 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-          <folding>
-            <element signature="method#getAddedItemname#0;class#OptimusCartDetailsPage#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fileReaderUtils/PropertiesFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -988,6 +925,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/baseSetUp/DriverBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/optimusShoppingCartPages/OptimusCartDetailsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="method#getAddedItemname#0;class#OptimusCartDetailsPage#0" />
+          </folding>
         </state>
       </provider>
     </entry>
