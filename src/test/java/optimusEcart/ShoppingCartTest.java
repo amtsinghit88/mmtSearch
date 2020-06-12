@@ -40,6 +40,7 @@ public class ShoppingCartTest extends BrowserSetUp
 	@Test(priority = 1)
 	public void verifyAddFeaturedItemsToCart()
 	{
+		Reporter.log("Running verifyAddFeaturedItemsToCart test",true);
 		optimusHomePage = new OptimusHomePage(driver);
 		itemName = optimusHomePage.getFeaturedItemName();
 		optimusHomePage.clickFeaturedItemlink();
@@ -58,12 +59,13 @@ public class ShoppingCartTest extends BrowserSetUp
 
 
     @Test(priority = 2)
-	@Parameters({"productName"})
-	public void verifyAddItemsToCart(String searchIemName)
+	@Parameters({"searchItemName"})
+	public void verifyAddItemsToCart(String searchItemName)
 	{
+		Reporter.log("verifyAddItemsToCart",true);
 		optimusHomePage = new OptimusHomePage(driver);
 		optimusHomePage.clickOnSearchIcon();
-		optimusHomePage.enterTextInSearchBox(searchIemName);
+		optimusHomePage.enterTextInSearchBox(searchItemName);
 		Reporter.log("Optimus search results page is displayed",true);
 		optimusSrp = new SearchResultsPage(driver);
 		cartPage = new OptimusCartDetailsPage(driver);
@@ -102,13 +104,14 @@ public class ShoppingCartTest extends BrowserSetUp
 	}
 
 	@Test(priority = 4)
-	@Parameters({"searchIemName"})
-	public void verifyProductPrice(String searchIemName)
+	@Parameters({"searchItemName"})
+	public void verifyProductPrice(String searchItemName)
 	{
+		Reporter.log("Running verifyProductPrice test", true);
 		JavaUtils util = new JavaUtils();
 		optimusHomePage= new OptimusHomePage(driver);
 		optimusHomePage.clickOnSearchIcon();
-		optimusHomePage.enterTextInSearchBox(searchIemName);
+		optimusHomePage.enterTextInSearchBox(searchItemName);
 		Reporter.log("Optimus search results page is displayed",true);
 		optimusSrp = new SearchResultsPage(driver);
 		optimusSrp.openProudctDetailsPage();
