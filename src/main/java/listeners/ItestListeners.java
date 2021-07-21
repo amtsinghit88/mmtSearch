@@ -1,10 +1,14 @@
 package listeners;
 
+import baseSetUp.BrowserSetUp;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import seleniumUtils.SeleniumUtil;
 
-public class ItestListeners implements ITestListener
+import java.io.IOException;
+
+public class ItestListeners extends BrowserSetUp implements ITestListener
 {
 
 
@@ -21,11 +25,11 @@ public class ItestListeners implements ITestListener
 	@Override
 	public void onTestFailure(ITestResult result)
 	{
-//		try {
-//			getScreenShot(result.getName());
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			getFailedTestScreenShot(result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

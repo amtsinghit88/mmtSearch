@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "MMT Search" verbose="1">
+    <listeners>
+        <listener class-name="listeners.ExtentReporterNG" />
+    </listeners>
+    <test verbose="2" preserve-order="true" name="HotelSearch.java">
+        <classes>
+            <class name="mmtSearch.HotelSearch">
+            </class>
+        </classes>
+    </test>
+</suite>

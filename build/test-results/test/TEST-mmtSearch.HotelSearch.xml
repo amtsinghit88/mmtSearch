@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mmtSearch.HotelSearch" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-20T06:30:45" hostname="ip-192-168-1-4.ec2.internal" time="31.111">
+  <properties/>
+  <testcase name="hotelSearch" classname="mmtSearch.HotelSearch" time="31.111"/>
+  <system-out><![CDATA[MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday
+Selected CheckIn Date is CHECK-IN
+21 Aug21
+Saturday
+Selected CheckIn Date is CHECK-OUT
+29 Aug21
+Sunday
+Selected guests are ROOMS & GUESTS
+1 Rooms 3 Guests
+Selected price range is ₹ 1500 to ₹ 20500
+Searching for hotels...
+Searching for hotels...
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 12873
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 20, 2021 12:00:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

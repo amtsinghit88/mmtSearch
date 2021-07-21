@@ -1,0 +1,6 @@
+2021/07/21-12:43:30.551 2e07 Reusing MANIFEST /Users/abhishek/Desktop/Abhishek/Vedantu-automation/true/Default/Local Storage/leveldb/MANIFEST-000001
+2021/07/21-12:43:30.553 2e07 Recovering log #252
+2021/07/21-12:43:30.554 2e07 Reusing old log /Users/abhishek/Desktop/Abhishek/Vedantu-automation/true/Default/Local Storage/leveldb/000252.log 
+2021/07/21-12:43:38.382 2e07 Level-0 table #255: started
+2021/07/21-12:43:38.401 2e07 Level-0 table #255: 137661 bytes OK
+2021/07/21-12:43:38.447 2e07 Delete type=0 #252

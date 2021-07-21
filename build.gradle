@@ -10,6 +10,10 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+test {
+    useTestNG()
+    scanForTestClasses = false //this one
+}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
@@ -31,6 +35,11 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.aventstack/extentreports
     compile group: 'com.aventstack', name: 'extentreports', version: '3.1.5'
+    implementation 'org.testng:testng:6.9.6'
+
+    // https://mvnrepository.com/artifact/org.jboss.aerogear/aerogear-otp-java
+    implementation group: 'org.jboss.aerogear', name: 'aerogear-otp-java', version: '1.0.0'
+
 
 
 }

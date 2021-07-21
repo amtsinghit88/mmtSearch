@@ -1,69 +1,60 @@
 package baseSetUp;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.relevantcodes.extentreports.LogStatus;
 import fileReaderUtils.PropertiesFileReader;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
-import listeners.WebDriverListners;
+import listeners.WebDriverListeners;
+import seleniumUtils.SeleniumUtil;
 
 
 public class BrowserSetUp
 {
-	public  WebDriver driver;
-	public EventFiringWebDriver eventWebDriver;
-	public  WebDriverListners eventListener;
+	public  static WebDriver driver;
+	public static EventFiringWebDriver eventWebDriver;
+	public  static WebDriverListeners eventListener;
+	public static  ExtentTest test;
 
-	public  WebDriver launchApplication()
+
+	public static WebDriver launchApplication()
 	{
 		PropertiesFileReader fis = new PropertiesFileReader();
 		fis.getPropertyFile();
-		driver = new  DriverBuilder(fis.getBrowserType()).getWebDriver();
-			this.driver= new  DriverBuilder(fis.getBrowserType()).getWebDriver();
-		    eventWebDriver = new EventFiringWebDriver(this.driver);
-		    eventListener = new WebDriverListners();
+			driver= new  DriverBuilder(fis.getBrowserType()).getWebDriver();
+		    eventWebDriver = new EventFiringWebDriver(driver);
+		    eventListener = new WebDriverListeners();
 		    eventWebDriver.register(eventListener);
-		this.eventWebDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		    eventWebDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get(fis.getUrl());
 		driver.manage().window().maximize();
 		Reporter.log(driver.getTitle(),true);
 		return  eventWebDriver;
 	}
-
-	    public void getScreenShotOfFailedTest(ITestResult result) throws IOException
-		{
-			if(result.getStatus() == 2){
-			Reporter.log("Failure detected...",true);
-		    String fileName = String.format(result.getName()+"Screenshot-%s.jpg", Calendar.getInstance().getTimeInMillis());
-			File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			File destFile = new File(PropertiesFileReader.prop.getProperty("FailedTestScreenShort") + fileName);
-		    try{
-			FileHandler.copy(srcFile, destFile);
-		    } catch (IOException e)
-			{
-			e.printStackTrace();
-		    }
-		    Reporter.log("Screenshot taken",true);}
-			else{
-				Reporter.log("Test is pass successfully",true);
-			}
-		}
+	public void getFailedTestScreenShot(ITestResult result) throws IOException {
+		if (result.getStatus()== ITestResult.FAILURE)
+			SeleniumUtil.getScreenShot(driver, result.getName());
+	}
 
 
-	public  void closeBrowser()
+	public void closeBrowser()
 	{
 		Reporter.log("Closing the browser",true);
-		driver.close();
+		driver.quit();
 	}
 
 

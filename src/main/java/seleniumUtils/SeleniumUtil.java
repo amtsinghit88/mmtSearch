@@ -1,16 +1,28 @@
 package seleniumUtils;
 
+import baseSetUp.BrowserSetUp;
+import fileReaderUtils.PropertiesFileReader;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+import sun.awt.www.content.image.png;
 
-public class SeleniumUtil
+import java.io.File;
+import java.io.IOException;
+import java.security.PublicKey;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class SeleniumUtil extends  BrowserSetUp
 {
-	public static boolean isElementDisplayed(WebElement ele)
+	public static boolean isElementDisplayed(WebDriver driver, WebElement ele)
 	{
-		try {
+		try {new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(ele));
 			ele.isDisplayed();
 			return true;
 		}
@@ -20,24 +32,11 @@ public class SeleniumUtil
 		}
 	}
 
-	public static boolean waitForElementVisiblity(WebDriver driver, WebElement ele, int time)
-	{
-       try
-	   {
-		   new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(ele));
-		   return true;
-	   } catch (Exception e) {
-		   Reporter.log("Element is not visible waitng after " + time + " seconds.");
-		   Reporter.log(""+ele);
-		   return false;
-	   }
-	}
 
-
-	public static void seleniumClick(WebElement ele)
+	public static void clickOnElement(WebDriver driver, WebElement ele)
 	{
 		try
-		{
+		{new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(ele));
 			if (ele.isDisplayed())
 				ele.click();
 		}
@@ -48,10 +47,10 @@ public class SeleniumUtil
 		}
 	}
 
-	public static void seleniumEnterText(WebElement ele, String text)
+	public static void enterElementText(WebDriver driver,WebElement ele, String text)
 	{
 		try
-		{
+		{new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(ele));
 			if (ele.isDisplayed())
 				ele.click();
 			    ele.clear();
@@ -65,10 +64,10 @@ public class SeleniumUtil
 		}
 	}
 
-	public static void seleniumSubmitText(WebElement ele)
+	public static void submitSearchText(WebDriver driver, WebElement ele)
 		{
 		try
-		{
+		{new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(ele));
 			if (ele.isDisplayed())
 				ele.submit();
 		}
@@ -79,11 +78,11 @@ public class SeleniumUtil
 		}
 	}
 
-	public static String seleniumGetText(WebElement ele)
+	public static String getElementText(WebDriver driver, WebElement ele)
 	{
 		String text ="";
 		try
-		{
+		{new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(ele));
 			if (ele.isDisplayed())
 			text = ele.getText();
 		}
@@ -95,10 +94,10 @@ public class SeleniumUtil
 		return text;
 	}
 
-	public static String getSelectedOption(WebElement ele)
+	public static String getSelectedOption(WebDriver driver, WebElement ele)
 	{
 		String selectedValue = "";
-		try {
+		try {new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(ele));
 			if (ele.isEnabled()){
 			Select dropDownValue = new Select(ele);
 				selectedValue= dropDownValue.getFirstSelectedOption().getText();}
@@ -111,9 +110,9 @@ public class SeleniumUtil
 		return selectedValue;
 	}
 
-	public static void selectDropdownValue(WebElement ele,String size)
+	public static void selectDropdownValue(WebDriver driver, WebElement ele,String size)
 	{
-		try {
+		try { new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(ele));
 			if (ele.isEnabled()){
 				Select dropDownValue = new Select(ele);
 				dropDownValue.selectByValue(size);}
@@ -125,12 +124,74 @@ public class SeleniumUtil
 		}
 	}
 
-	public static String seleniumGetAttributValue(WebElement ele, String attributeName)
+	public static String getAttributeValue(WebDriver driver, WebElement ele, String attributeName)
 	{
-		return ele.getAttribute(attributeName);
+		String attribute ="";
+		try
+		{new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(ele));
+			if (ele.isDisplayed())
+				attribute = ele.getAttribute(attributeName);
+		}
+		catch (NoSuchElementException | StaleElementReferenceException | ElementNotVisibleException exc)
+		{
+			exc.printStackTrace();
+			Reporter.log("No such element exception :: locator value" + ele,true);
+		}
+		return attribute;
 	}
 
+	public static void selectMonth(WebElement monthElement, String selectMonth){
+			String monthName = monthElement.getText();
+			if (!monthName.equals(selectMonth)){
+				//click on back arrow icon
+			}
+			else {
 
+			}
+	}
 
+	public static void clickGivenDay(List<WebElement> elementList, String day) {
 
+		/**Non-functional JAVA version of this method.*/
+		for (
+		    WebElement cell : elementList) {
+		    String cellText = cell.getText();
+		    if (cellText.contains(day)) {
+		        cell.click();
+		        break;
+		    }
+		}
+	}
+
+	public static void switchToChildWindow(WebDriver driver) {
+		Set<String> windowHandles = driver.getWindowHandles();
+		for (String windowId : windowHandles) {
+			if (!windowId.equals(windowHandles)) {
+				driver.switchTo().window(windowId);
+			}
+		}
+	}
+
+	public static void switchToParentWindow(WebDriver driver, String parentWindow){
+		Set<String> windowHandles = driver.getWindowHandles();
+		for (String windowId : windowHandles) {
+			if (windowId.equals(parentWindow)) {
+				driver.switchTo().window(parentWindow);
+			}
+		}
+	}
+
+	public  static void getScreenShot(WebDriver driver, String screenshotName){
+		String datetime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String filePath = System.getProperty("user.dir")+"/screenshots/" + "/FailedTestScreenShot/"+screenshotName + datetime+".png";
+		File finalFile = new File(filePath);
+		try{
+			FileUtils.copyFile(srcFile, finalFile);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		Reporter.log("Screenshot taken",true);
+	}
 }

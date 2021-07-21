@@ -43,7 +43,7 @@ public class PropertiesFileReader {
 		try
 		{
 			prop = new Properties();
-			prop.load(new FileInputStream("/Users/abhishek/Downloads/ui-automation/" +
+			prop.load(new FileInputStream("/Users/abhishek/Desktop/Abhishek/Vedantu-automation/" +
 					"src/main/resources/Config.properties"));
 		}
 		catch (IOException e) {
