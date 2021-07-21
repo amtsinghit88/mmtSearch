@@ -1,100 +1,172 @@
 package mmtPages;
 
+import JavaUtils.JavaUtils;
 import baseSetUp.BrowserSetUp;
+import bsh.StringUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 import seleniumUtils.SeleniumUtil;
 
+import java.time.LocalDate;
 import java.util.List;
 
-public class MmtSearchResultsPage  extends BrowserSetUp {
+public class MmtSearchPage extends BrowserSetUp {
 
-    WebDriverWait wait = new WebDriverWait(driver,20);
-
-    public WebElement getMinPriceSlider(){
-        return  wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//span[@class = 'input-range__slider-container'])[1]"))));
+    public  WebElement getHotelsTab(){
+        return driver.findElement(By.xpath("//span[text()= 'Hotels']"));
     }
 
-    public WebElement getMinPrice(){
-        return  wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//span[@class = 'minValue']"))));
+    public  WebElement getMmtLogo(){
+        return  driver.findElement(By.xpath("//a[@data-cy= 'mmtLogo']"));
     }
 
-    public  WebElement getMaxPriceSlider(){
-        return wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//span[@class = 'input-range__slider-container'])[2]"))));
+    public WebElement getCheckInBox(){
+        return  driver.findElement(By.xpath("//label[@for= 'checkin']"));
     }
 
-    public WebElement getMaxPrice(){
-        return  wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//span[@class = 'maxValue']"))));
+    public WebElement getCheckOutBox(){
+        return  driver.findElement(By.xpath("//label[@for= 'checkout']"));
     }
 
-    public  WebElement getRemovePriceFilter(){
-        return  driver.findElement(By.xpath("//ul[@class = 'appliedFilters']/li/a"));
+    public WebElement getMonthElement(){
+        return driver.findElement(By.xpath("(//div[@class = 'DayPicker-Month']/div/div)[1]"));
     }
 
-    public  WebElement getViewMoreButton(){
-        return  driver.findElement(By.id("hlistpg_proptypes_show_more"));
+    public  WebElement getBackArrowIcon(){
+        return  driver.findElement(By.xpath("//span[@aria-label= 'Previous Month']"));
+    }
+    public  List<WebElement> getCheckInDateElement(){
+        return  driver.findElements(By.xpath("//div[@class= 'DayPicker-Day']"));
     }
 
-    public List<WebElement> getPopularFilterList(){
-        return  driver.findElements(By.xpath("//div[@id = 'POPULAR']/ul/li/span/label"));
+    public List<WebElement> getCheckOutDateElement(){
+        return  driver.findElements(By.xpath("//div[@class= 'DayPicker-Day']"));
     }
 
-    public WebElement getHotelSearchResults(){
-        return  driver.findElement(By.xpath("//div[@class = 'listingRowOuter hotelTileDt makeRelative']"));
+    public WebElement getRoomGuestSelectBox(){
+        return driver.findElement(By.xpath("//div[@class = 'hsw_inputBox roomGuests  ']"));
     }
 
-    public  WebElement getHotelsLink(){
-        return  driver.findElement(By.id("Listing_hotel_"+0));
+    public WebElement getSelectedGuests(){
+        return  driver.findElement(By.xpath("//label[@for= 'guest']"));
     }
 
 
-    public MmtSearchResultsPage(WebDriver driver){
+    public WebElement getSelectAdultElement(String noOfAdults){
+       return  driver.findElement(By.xpath("//li[@data-cy= 'adults-"+noOfAdults+"']"));
+    }
+
+    public WebElement getSelectChildElement(String noOfChild){
+        return driver.findElement(By.xpath("//li[@data-cy= 'children-"+noOfChild+"']"));
+    }
+
+    public WebElement getChildAgeSelectBox(){
+        return driver.findElement(By.xpath("//select[@class= 'ageSelectBox']"));
+    }
+
+    public String checkInDateSelect = "(//div[.='label'])[1]";
+    public String checkInDateSelect1 = "(//div[.='label'])[2]";
+    public String checkOutDateSelect = "(//div[.='label'])[1]";
+
+
+    public  WebElement getApplyButton(){
+        return driver.findElement(By.xpath("//button[text() = 'APPLY']"));
+    }
+
+    public  WebElement getSearchButton(){
+        return  driver.findElement(By.id("hsw_search_button"));
+    }
+
+    public  MmtSearchPage(WebDriver driver){
         this.driver = driver;
     }
 
-    public  boolean verifyHotelSearchResults(){
-        return SeleniumUtil.isElementDisplayed(driver,getHotelSearchResults());
-    }
-
-    public  void selectHotelsFromSearchResult(){
-        System.out.println("Searching for hotels...");
-        SeleniumUtil.clickOnElement(driver,getHotelsLink());
-    }
-
-    public  void selectPriceFilter() throws InterruptedException {
+    public MmtSearchPage clickOnMmtLogo()
+    {
         Actions userAction = new Actions(driver);
-        userAction.clickAndHold(getMinPriceSlider());
-        userAction.moveByOffset(30,0);
-        userAction.release().perform();
-        Thread thread = null;
-        thread.sleep(10000);
-        userAction.moveToElement(getMaxPriceSlider());
-        userAction.clickAndHold(getMaxPriceSlider());
-        userAction.moveByOffset(-20,0);
-        userAction.release().perform();
-        System.out.println("Selected price range is "+ SeleniumUtil.getElementText(driver,getMinPrice())+" to "+SeleniumUtil.getElementText(driver,getMaxPrice()));
+        userAction.moveToElement(getMmtLogo()).click().release().perform();
+        return  this;
     }
-
-    public MmtSearchResultsPage removePriceFilter(){
-        SeleniumUtil.clickOnElement(driver,getRemovePriceFilter());
+    public MmtSearchPage selectHotelTab(){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click();", getHotelsTab());
         return this;
     }
 
-    public MmtSearchResultsPage viewMoreFilters(){
-        SeleniumUtil.clickOnElement(driver,getViewMoreButton());
+    public void selectCheckInCheckOutDate(int noOfDays){
+        JavaUtils utils = new JavaUtils();
+        LocalDate checkInDate = utils.getFutureDate(1);
+        String[] date = utils.dateSplitter(checkInDate);
+        LocalDate checkOutDate = utils.getFutureDate(noOfDays);
+        SeleniumUtil.clickOnElement(driver,getCheckInBox());
+        boolean isPreviousMonthIconDisplayed = getBackArrowIcon().isDisplayed();
+        while (isPreviousMonthIconDisplayed){
+            SeleniumUtil.clickOnElement(driver,getBackArrowIcon());
+            isPreviousMonthIconDisplayed = getBackArrowIcon().isDisplayed();
+        }
+        SeleniumUtil.clickGivenDay(getCheckInDateElement(), date[2]);
+        System.out.println("Selected CheckIn Date is "+ SeleniumUtil.getElementText(driver,getCheckInBox()));
+        SeleniumUtil.clickGivenDay(getCheckOutDateElement(),utils.dateSplitter(checkOutDate)[2]);
+        System.out.println("Selected CheckIn Date is "+ SeleniumUtil.getElementText(driver,getCheckOutBox()));
+
+
+    }
+
+    public void selectCheckInCheckOutDate1(int noOfDays,int chkInAfterCurrentDay){
+        int currentDate = LocalDate.now().getDayOfMonth()+chkInAfterCurrentDay;
+        SeleniumUtil.clickOnElement(driver,getCheckInBox());
+        if(currentDate>30 ||currentDate >31){
+            currentDate = currentDate - (LocalDate.now().getDayOfMonth());
+            SeleniumUtil.clickOnElement(driver,driver.findElement(
+                    By.xpath(checkInDateSelect1.replaceAll("label",String.valueOf(currentDate)))));
+            SeleniumUtil.clickOnElement(driver,driver.findElement(
+                    By.xpath(checkInDateSelect1.replaceAll("label",String.valueOf(currentDate+noOfDays)))));
+
+        }else{
+            SeleniumUtil.clickOnElement(driver,driver.findElement(
+                    By.xpath(checkInDateSelect.replaceAll("label",String.valueOf(currentDate)))));
+            SeleniumUtil.clickOnElement(driver,driver.findElement(
+                    By.xpath(checkInDateSelect.replaceAll("label",String.valueOf(currentDate+noOfDays)))));
+        }
+        /*JavaUtils utils = new JavaUtils();
+        LocalDate checkInDate = utils.getFutureDate(1);
+        String[] date = utils.dateSplitter(checkInDate);
+        LocalDate checkOutDate = utils.getFutureDate(noOfDays);
+        SeleniumUtil.clickOnElement(driver,getCheckInBox());
+        boolean isPreviousMonthIconDisplayed = getBackArrowIcon().isDisplayed();
+        while (isPreviousMonthIconDisplayed){
+            SeleniumUtil.clickOnElement(driver,getBackArrowIcon());
+            isPreviousMonthIconDisplayed = getBackArrowIcon().isDisplayed();
+        }
+        SeleniumUtil.clickGivenDay(getCheckInDateElement(), date[2]);
+        System.out.println("Selected CheckIn Date is "+ SeleniumUtil.getElementText(driver,getCheckInBox()));
+        SeleniumUtil.clickGivenDay(getCheckOutDateElement(),utils.dateSplitter(checkOutDate)[2]);
+        System.out.println("Selected CheckIn Date is "+ SeleniumUtil.getElementText(driver,getCheckOutBox()));*/
+
+        System.out.println("Selected CheckIn Date is "+ SeleniumUtil.getElementText(driver,getCheckInBox()));
+        System.out.println("Selected CheckIn Date is "+ SeleniumUtil.getElementText(driver,getCheckOutBox()));
+
+
+    }
+
+    public MmtSearchPage selectGuests(String noOfAdults, String noOfChild, String childAge){
+        SeleniumUtil.clickOnElement(driver,getRoomGuestSelectBox());
+        SeleniumUtil.clickOnElement(driver,getSelectAdultElement(noOfAdults));
+        SeleniumUtil.clickOnElement(driver,getSelectChildElement(noOfChild));
+        Select objSelect = new Select(getChildAgeSelectBox());
+        objSelect.selectByVisibleText(childAge);
+        SeleniumUtil.clickOnElement(driver,getApplyButton());
+        System.out.println("Selected guests are "+SeleniumUtil.getElementText(driver,getSelectedGuests()));
         return this;
     }
 
-    public void selectFromPopularFilterList(){
-        List<WebElement> popularFilterList = getPopularFilterList();
-        popularFilterList.get(popularFilterList.size()-1).click();
+    public void searchForHotels(){
+        SeleniumUtil.clickOnElement(driver,getSearchButton());
     }
 
-    public void switchToHotelDetailsPage(){
-        SeleniumUtil.switchToChildWindow(driver);
-    }
+
+
 }
